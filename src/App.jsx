@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
 
 import Header from './components/Header';
@@ -21,6 +21,7 @@ function App() {
         <Route path='/' component={Home} exact />
         <Route path='/video' component={Video} exact />
         <Route path='/finish' component={Finish} exact />
+        <Redirect from='*' to='/' />
       </AnimatedSwitch>
     </>
   );

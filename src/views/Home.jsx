@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
+import useSound from 'use-sound';
 import ArturoPratImage from '../styles/images/prat.png';
 
 const bullets = [
@@ -27,6 +28,14 @@ const bullets = [
 ];
 
 const Home = () => {
+  const [play] = useSound(`/sounds/click.mp3`, {
+    interrupt: true,
+  });
+
+  const handleSound = () => {
+    play();
+  };
+
   return (
     <div id='Home'>
       <div className='video'>
@@ -50,13 +59,15 @@ const Home = () => {
             </h2>
             <p className='aside__legend'>Gonzalo Vial C.</p>
 
-            <Link to='/video'>
+            <Link to='/video' onClick={() => handleSound()}>
               <div className='aside__btn-play button button--error button--has-icon has-with'>
                 <span>Play video</span>
                 <img className='icon' src='/images/ico_play.png' alt='icon' />
               </div>
             </Link>
-            <p className='aside__action-text'>Click en pantalla para iniciar</p>
+            <p onClick={() => handleSound()} className='aside__action-text'>
+              Click en pantalla para iniciar
+            </p>
           </div>
           <img className='main__image' src={ArturoPratImage} alt='Arturo Prat' />
           <div className='main__rightside'>

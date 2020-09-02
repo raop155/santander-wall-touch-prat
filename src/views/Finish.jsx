@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import useSound from 'use-sound';
 
 const Finish = ({ history }) => {
+  const [play] = useSound(`/sounds/click.mp3`, {
+    interrupt: true,
+  });
+
   const handleChangeView = (view) => {
+    play();
     history.push(view);
   };
 

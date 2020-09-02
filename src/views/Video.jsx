@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ReactPlayer from 'react-player';
+import useSound from 'use-sound';
 
 const secondsToTime = (duration) => {
   // Hours, minutes and seconds
@@ -29,6 +30,10 @@ const Video = ({ history }) => {
   const [time, setTime] = useState('0:00');
   const [duration, setDuration] = useState(0);
   let videoPlayerRef = useRef(null);
+
+  const [play] = useSound(`/sounds/click.mp3`, {
+    interrupt: true,
+  });
 
   useEffect(() => {
     console.log('counter', counter);
@@ -87,6 +92,7 @@ const Video = ({ history }) => {
   const handlePlayPause = (e) => {
     console.log('handlePlayPause');
     setPlaying((prev) => !prev);
+    play();
   };
 
   return (
