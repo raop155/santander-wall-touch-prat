@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 import ArturoPratImage from '../styles/images/prat.png';
 
 const bullets = [
@@ -28,6 +29,18 @@ const bullets = [
 const Home = () => {
   return (
     <div id='Home'>
+      <div className='video'>
+        <ReactPlayer
+          // ref={ref}
+          className='react-player'
+          url={'/videos/bg_loop.mov'}
+          width={1920}
+          height={1080}
+          playing={true}
+          loop={true}
+          // controls={true}
+        />
+      </div>
       <div className='content'>
         <main className='main'>
           <div className='main__aside'>

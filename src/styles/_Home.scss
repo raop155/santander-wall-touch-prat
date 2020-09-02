@@ -5,6 +5,12 @@
   flex-direction: column;
   justify-content: space-between;
 
+  .video {
+    position: absolute;
+    top: -129px;
+    z-index: -1;
+  }
+
   .main {
     padding: 25px 100px 0 100px;
     display: flex;

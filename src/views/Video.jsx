@@ -19,7 +19,7 @@ const secondsToTime = (duration) => {
   return ret;
 };
 
-const Video = () => {
+const Video = ({ history }) => {
   const [urls] = useState(['/videos/prat.mov']);
   const [counter, setCounter] = useState(0);
   const [url, setUrl] = useState(urls[counter]);
@@ -39,7 +39,8 @@ const Video = () => {
 
   const handleOnEnded = () => {
     console.log('handleOnEnded');
-    setCounter((prev) => prev + 1);
+    // setCounter((prev) => prev + 1);
+    history.push('/finish');
   };
 
   const ref = (player) => {
@@ -107,13 +108,13 @@ const Video = () => {
             width={1920}
             height={1080}
             playing={playing}
-            loop={true}
+            // loop={true}
             onPlay={handlePlay}
             onProgress={handleProcess}
             onDuration={handleDuration}
             onEnded={handleOnEnded}
             onReady={handleReady}
-            muted={true}
+            // muted={true}
             // light={true}
             // controls={true}
           />

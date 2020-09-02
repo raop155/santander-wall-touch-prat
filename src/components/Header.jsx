@@ -9,9 +9,9 @@ const Header = () => {
       </div>
       <nav className='header__nav'>
         <div>
-          <Link to='/'>
+          {/* <Link to='/'>
             <img src='/images/ico_back.png' alt='Back button' />
-          </Link>
+          </Link> */}
           <Link to='/'>
             <img src='/images/ico_home.png' alt='Home button' />
           </Link>
