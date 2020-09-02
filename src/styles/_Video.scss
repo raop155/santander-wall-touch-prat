@@ -1,0 +1,116 @@
+#Video {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .main {
+    display: flex;
+    flex: 6;
+
+    .left-side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+
+      &__legend {
+        .title {
+          font-size: 35px;
+          margin-bottom: 0;
+        }
+
+        .description {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .video {
+      position: absolute;
+      top: -129px;
+      z-index: -1;
+      // display: flex;
+      // flex: 6;
+      // justify-content: center;
+      // align-items: center;
+
+      // .react-player {
+      //   background: black;
+      // }
+
+      // opacity: 0;
+      // animation: fadein 1s;
+      // animation-delay: 0.75s;
+      // animation-fill-mode: forwards;
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .blank {
+      flex: 6;
+    }
+
+    .right-side {
+      flex: 1;
+    }
+  }
+
+  .controls {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .controls-container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 50%;
+
+      .bar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 15px 25px;
+        background: fade-out($primary-color, 0.85);
+        border: 1px solid fade-out($primary-color, 0.7);
+        border-radius: 25px;
+
+        .progress-bar {
+          width: 96%;
+        }
+
+        .time {
+          width: 4%;
+          text-align: right;
+          margin-left: 15px;
+        }
+      }
+    }
+
+    // .seek-bar {
+    //   width: 100%;
+    //   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    //   background: transparent; /* Otherwise white in Chrome */
+    //   &::-webkit-slider-thumb {
+    //     -webkit-appearance: none;
+    //     border: 1px solid #000000;
+    //     height: 36px;
+    //     width: 16px;
+    //     border-radius: 3px;
+    //     background: #ffffff;
+    //     cursor: pointer;
+    //     margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    //     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+    //   }
+    // }
+  }
+}

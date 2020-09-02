@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ArturoPratImage from '../styles/images/prat.png';
 
 const bullets = [
   {
@@ -28,18 +29,6 @@ const Home = () => {
   return (
     <div id='Home'>
       <div className='content'>
-        <header className='header'>
-          <div className='header__logo'>
-            <img src='/assets/logo.png' alt='Logo' />
-          </div>
-          <nav className='header__nav'>
-            <div>
-              <img src='/assets/ico_back.png' alt='Back button' />
-              <img src='/assets/ico_home.png' alt='Home button' />
-            </div>
-          </nav>
-        </header>
-
         <main className='main'>
           <div className='main__aside'>
             <h1 className='aside__title'>Arturo Prat</h1>
@@ -48,16 +37,15 @@ const Home = () => {
             </h2>
             <p className='aside__legend'>Gonzalo Vial C.</p>
 
-            <Link to='/video' className='aside__btn-play button button--error'>
-              <div className='ml-15'>Play video</div>
-              <div className='icon'>
-                <img src='/assets/ico_play.png' alt='Play icon' />
+            <Link to='/video'>
+              <div className='aside__btn-play button button--error button--has-icon has-with'>
+                <span>Play video</span>
+                <img className='icon' src='/images/ico_play.png' alt='icon' />
               </div>
             </Link>
+            <p className='aside__action-text'>Click en pantalla para iniciar</p>
           </div>
-          <div className='main__image'>
-            <img src='/assets/prat.png' alt='' />
-          </div>
+          <img className='main__image' src={ArturoPratImage} alt='Arturo Prat' />
           <div className='main__rightside'>
             <p className='rightside__date'>1879</p>
             <p className='rightside__legend'>
@@ -67,20 +55,18 @@ const Home = () => {
         </main>
       </div>
 
-      <div>
-        <footer className='footer'>
-          <ol className='footer__dates'>
-            {bullets.map((bullet) => {
-              return (
-                <li key={bullet.title} className='dates'>
-                  <div className='dates__title'>{bullet.title}</div>
-                  <div className='dates__description'>{bullet.description}</div>
-                </li>
-              );
-            })}
-          </ol>
-        </footer>
-      </div>
+      <footer className='footer'>
+        <ol className='footer__dates'>
+          {bullets.map((bullet) => {
+            return (
+              <li key={bullet.title} className='dates'>
+                <div className='dates__title'>{bullet.title}</div>
+                <div className='dates__description'>{bullet.description}</div>
+              </li>
+            );
+          })}
+        </ol>
+      </footer>
     </div>
   );
 };

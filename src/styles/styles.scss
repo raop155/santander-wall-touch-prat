@@ -1,0 +1,145 @@
+@import-normalize;
+
+// Settings
+@import './components/settings';
+
+// Components
+@import './components/Header';
+@import './components/button';
+
+// Views
+@import './Home';
+@import './Video';
+
+* {
+  // cursor: none;
+  // user-select: none;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-Regular.otf') format('opentype');
+}
+
+* {
+  box-sizing: border-box;
+  & :focus {
+    outline: none;
+  }
+}
+
+html {
+  /* height: 100%; */
+  // width: 100%;
+  font-size: 16px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, Tahoma, serif;
+  color: var(--primary-color);
+  width: 1920px;
+  height: 1080px;
+  background: url('./images/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Utils*/
+
+.mt-5 {
+  margin-top: 5px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-25 {
+  margin-top: 25px;
+}
+
+.mb-5 {
+  margin-bottom: 5px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-25 {
+  margin-bottom: 25px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.ml-15 {
+  margin-left: 15px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.ml-25 {
+  margin-left: 25px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.mr-25 {
+  margin-right: 25px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* AnimatedSwitch react-router-transition */
+.switch-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.switch-wrapper > div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
