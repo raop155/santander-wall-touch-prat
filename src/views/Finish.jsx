@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactPlayer from 'react-player';
 import useSound from 'use-sound';
+import * as utils from '../utils/utils';
 
 const Finish = ({ history }) => {
-  const [play] = useSound(`/sounds/click.mp3`, {
+  useEffect(() => {
+    console.log('utils.test();', utils.test());
+  }, []);
+
+  const [play] = useSound(process.env.PUBLIC_URL + `/sounds/click.mp3`, {
     interrupt: true,
   });
 
@@ -18,7 +23,7 @@ const Finish = ({ history }) => {
         <ReactPlayer
           // ref={ref}
           className='react-player'
-          url={'/videos/bg_loop.mov'}
+          url={process.env.PUBLIC_URL + '/videos/bg_loop.mov'}
           width={1920}
           height={1080}
           playing={true}
@@ -35,11 +40,11 @@ const Finish = ({ history }) => {
       <main className='main'>
         <div className='buttons'>
           <div className='buttons__back' onClick={() => handleChangeView('/video')}>
-            <img src='/images/btn_play.png' alt='Back button' />
+            <img src={process.env.PUBLIC_URL + '/images/btn_play.png'} alt='Back button' />
             <span>Ver nuevamente</span>
           </div>
           <div className='buttons__home' onClick={() => handleChangeView('/')}>
-            <img src='/images/btn_home.png' alt='Home button' />
+            <img src={process.env.PUBLIC_URL + '/images/btn_home.png'} alt='Home button' />
             <span>Volver al home</span>
           </div>
         </div>

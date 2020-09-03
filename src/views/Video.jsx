@@ -21,7 +21,7 @@ const secondsToTime = (duration) => {
 };
 
 const Video = ({ history }) => {
-  const [urls] = useState(['/videos/prat.mov']);
+  const [urls] = useState([process.env.PUBLIC_URL + '/videos/prat.mov']);
   const [counter, setCounter] = useState(0);
   const [url, setUrl] = useState(urls[counter]);
   const [played, setPlayed] = useState(0);
@@ -31,7 +31,7 @@ const Video = ({ history }) => {
   const [duration, setDuration] = useState(0);
   let videoPlayerRef = useRef(null);
 
-  const [play] = useSound(`/sounds/click.mp3`, {
+  const [play] = useSound(process.env.PUBLIC_URL + `/sounds/click.mp3`, {
     interrupt: true,
   });
 
@@ -133,9 +133,15 @@ const Video = ({ history }) => {
           <div className='buttons'>
             <div className='playPause' onClick={handlePlayPause}>
               {playing ? (
-                <img src='/images/ico_pause_controls.png' alt='Pause icon' />
+                <img
+                  src={process.env.PUBLIC_URL + '/images/ico_pause_controls.png'}
+                  alt='Pause icon'
+                />
               ) : (
-                <img src='/images/ico_play_controls.png' alt='Play icon' />
+                <img
+                  src={process.env.PUBLIC_URL + '/images/ico_play_controls.png'}
+                  alt='Play icon'
+                />
               )}
             </div>
           </div>

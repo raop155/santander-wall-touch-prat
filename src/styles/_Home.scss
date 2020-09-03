@@ -18,7 +18,22 @@
   }
 
   .main__aside {
-    margin-top: 150px;
+    margin-top: 75px;
+
+    .aside__buttons {
+      display: flex;
+
+      > * {
+        color: fade-out($primary-color, 0.5);
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > span {
+          margin-top: 15px;
+        }
+      }
+    }
   }
 
   .aside__title {
@@ -43,6 +58,7 @@
   }
 
   .aside__btn-play {
+    margin-bottom: 50px;
     width: 220px;
     height: 50px;
   }

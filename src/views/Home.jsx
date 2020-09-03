@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import useSound from 'use-sound';
 import ArturoPratImage from '../styles/images/prat.png';
+import * as utils from '../utils/utils';
 
 const bullets = [
   {
@@ -28,7 +29,11 @@ const bullets = [
 ];
 
 const Home = () => {
-  const [play] = useSound(`/sounds/click.mp3`, {
+  useEffect(() => {
+    console.log('utils.test();', utils.test());
+  }, []);
+
+  const [play] = useSound(process.env.PUBLIC_URL + `/sounds/click.mp3`, {
     interrupt: true,
   });
 
@@ -42,7 +47,7 @@ const Home = () => {
         <ReactPlayer
           // ref={ref}
           className='react-player'
-          url={'/videos/bg_loop.mov'}
+          url={process.env.PUBLIC_URL + '/videos/bg_loop.mov'}
           width={1920}
           height={1080}
           playing={true}
@@ -62,12 +67,22 @@ const Home = () => {
             <Link to='/video' onClick={() => handleSound()}>
               <div className='aside__btn-play button button--error button--has-icon has-with'>
                 <span>Play video</span>
-                <img className='icon' src='/images/ico_play.png' alt='icon' />
+                <img
+                  className='icon'
+                  src={process.env.PUBLIC_URL + '/images/ico_play.png'}
+                  alt='icon'
+                />
               </div>
             </Link>
-            <p onClick={() => handleSound()} className='aside__action-text'>
-              Click en pantalla para iniciar
-            </p>
+            <div className='aside__buttons'>
+              <Link to='/qr' onClick={() => handleSound()}>
+                <img
+                  src={process.env.PUBLIC_URL + '/images/btn_gallery.png'}
+                  alt='Gallery button'
+                />
+                <span>Galería de imágenes</span>
+              </Link>
+            </div>
           </div>
           <img className='main__image' src={ArturoPratImage} alt='Arturo Prat' />
           <div className='main__rightside'>
