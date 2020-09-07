@@ -38,7 +38,9 @@
       display: flex;
 
       &__back,
+      &__forward,
       &__home {
+        padding: 25px 25px 75px 25px;
         > span {
           font-size: 20px;
           font-weight: 700;
@@ -46,8 +48,9 @@
         }
       }
 
+      &__forward,
       &__home {
-        margin-left: 125px;
+        margin-left: 20px;
       }
 
       > div {

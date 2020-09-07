@@ -12,7 +12,7 @@
   }
 
   .main {
-    padding: 25px 100px 0 100px;
+    padding: 25px 100px 0 75px;
     display: flex;
     justify-content: space-between;
   }
@@ -21,18 +21,20 @@
     margin-top: 75px;
 
     .aside__buttons {
-      display: flex;
+      display: inline-flex;
+      flex-direction: column;
 
-      > * {
-        color: fade-out($primary-color, 0.5);
-        font-size: 14px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        > span {
-          margin-top: 15px;
-        }
-      }
+      // > * {
+      //   color: fade-out($primary-color, 0.5);
+      //   font-size: 14px;
+      //   display: flex;
+      //   flex-direction: column;
+      //   align-items: center;
+      //   margin-right: 75px;
+      //   > span {
+      //     margin-top: 15px;
+      //   }
+      // }
     }
   }
 
@@ -57,8 +59,22 @@
     font-style: italic;
   }
 
+  .aside__title,
+  .aside__subtitle,
+  .aside__legend {
+    padding-left: 25px;
+  }
+
   .aside__btn-play {
-    margin-bottom: 50px;
+    display: inline-block;
+    // margin-bottom: 50px;
+    width: 220px;
+    height: 50px;
+  }
+
+  .aside__btn-gallery {
+    display: inline-block;
+    // margin-bottom: 50px;
     width: 220px;
     height: 50px;
   }

@@ -43,6 +43,10 @@ const Finish = ({ history }) => {
             <img src={process.env.PUBLIC_URL + '/images/btn_play.png'} alt='Back button' />
             <span>Ver nuevamente</span>
           </div>
+          <div className='buttons__forward' onClick={() => handleChangeView('/qr')}>
+            <img src={process.env.PUBLIC_URL + '/images/btn_forward.png'} alt='Home button' />
+            <span>Enviar a mi móvil</span>
+          </div>
           <div className='buttons__home' onClick={() => handleChangeView('/')}>
             <img src={process.env.PUBLIC_URL + '/images/btn_home.png'} alt='Home button' />
             <span>Volver al home</span>

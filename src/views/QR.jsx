@@ -24,7 +24,7 @@ const QR = () => {
 
       <main className='main'>
         <div className='qr'>
-          <img src={process.env.PUBLIC_URL + '/images/qr.png'} alt='QR' />
+          <img width='350' src={process.env.PUBLIC_URL + '/images/qr.png'} alt='QR' />
         </div>
         <p className='description'>
           Escanea el siguiente código QR

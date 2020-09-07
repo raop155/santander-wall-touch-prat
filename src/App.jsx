@@ -8,6 +8,7 @@ import Home from './views/Home';
 import Video from './views/Video';
 import Finish from './views/Finish';
 import QR from './views/QR';
+import Gallery from './views/Gallery';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/video' component={Video} exact />
         <Route path='/finish' component={Finish} exact />
         <Route path='/qr' component={QR} exact />
+        <Route path='/gallery' component={Gallery} exact />
         <Redirect from='*' to='/' />
       </AnimatedSwitch>
     </>

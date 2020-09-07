@@ -13,6 +13,7 @@
 @import './Video';
 @import './Finish';
 @import './QR';
+@import './Gallery';
 
 @font-face {
   font-family: 'Montserrat';
@@ -30,7 +31,7 @@ html {
   /* height: 100%; */
   // width: 100%;
   // cursor: none;
-  // user-select: none;
+  user-select: none;
   font-size: 16px;
 }
 
@@ -38,6 +39,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  // overflow: hidden;
 }
 
 body {

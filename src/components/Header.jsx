@@ -8,7 +8,7 @@ const Header = () => {
   });
 
   return (
-    <header className='header'>
+    <header id='Header'>
       <div className='header__logo'>
         <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt='Logo' />
       </div>
@@ -18,7 +18,11 @@ const Header = () => {
             <img src={process.env.PUBLIC_URL+'/images/ico_back.png'} alt='Back button' />
           </Link> */}
           <Link to='/' onClick={play}>
-            <img src={process.env.PUBLIC_URL + '/images/ico_home.png'} alt='Home button' />
+            <img
+              className='nav__link'
+              src={process.env.PUBLIC_URL + '/images/ico_home.png'}
+              alt='Home button'
+            />
           </Link>
         </div>
       </nav>

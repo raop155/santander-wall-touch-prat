@@ -64,23 +64,43 @@ const Home = () => {
             </h2>
             <p className='aside__legend'>Gonzalo Vial C.</p>
 
-            <Link to='/video' onClick={() => handleSound()}>
-              <div className='aside__btn-play button button--error button--has-icon has-with'>
-                <span>Play video</span>
-                <img
-                  className='icon'
-                  src={process.env.PUBLIC_URL + '/images/ico_play.png'}
-                  alt='icon'
-                />
-              </div>
-            </Link>
             <div className='aside__buttons'>
-              <Link to='/qr' onClick={() => handleSound()}>
+              {/* <Link to='/gallery' onClick={() => handleSound()}>
                 <img
                   src={process.env.PUBLIC_URL + '/images/btn_gallery.png'}
                   alt='Gallery button'
                 />
                 <span>Galería de imágenes</span>
+              </Link>
+              <Link to='/qr' onClick={() => handleSound()}>
+                <img src={process.env.PUBLIC_URL + '/images/btn_phone.png'} alt='Phone button' />
+                <span>Enviar a mi móvil</span>
+              </Link> */}
+
+              <Link className='button__container' to='/video' onClick={() => handleSound()}>
+                <div className='aside__btn-play'>
+                  <div className='button button--error button--has-icon has-with'>
+                    <span>Play video</span>
+                    <img
+                      className='icon'
+                      src={process.env.PUBLIC_URL + '/images/ico_play.png'}
+                      alt='icon'
+                    />
+                  </div>
+                </div>
+              </Link>
+
+              <Link className='button__container' to='/gallery' onClick={() => handleSound()}>
+                <div className='aside__btn-gallery'>
+                  <div className='button button--tertiary button--has-icon has-with'>
+                    <span>Ver galería</span>
+                    <img
+                      className='icon'
+                      src={process.env.PUBLIC_URL + '/images/ico_gallery.png'}
+                      alt='icon'
+                    />
+                  </div>
+                </div>
               </Link>
             </div>
           </div>

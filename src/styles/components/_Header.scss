@@ -1,7 +1,13 @@
-.header {
+#Header {
   z-index: 999;
   padding: 25px 50px 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .header__nav {
+    .nav__link {
+      padding: 15px;
+    }
+  }
 }
