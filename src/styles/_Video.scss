@@ -55,7 +55,13 @@
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      width: 50%;
+      width: 60%;
+
+      .buttons {
+        .playPause {
+          padding: 25px;
+        }
+      }
 
       .bar {
         display: flex;

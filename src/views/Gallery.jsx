@@ -12,7 +12,6 @@ const Gallery = () => {
     process.env.PUBLIC_URL + '/images/gallery/06.png',
     process.env.PUBLIC_URL + '/images/gallery/07.png',
     process.env.PUBLIC_URL + '/images/gallery/08.png',
-    process.env.PUBLIC_URL + '/images/gallery/08.png',
     process.env.PUBLIC_URL + '/images/gallery/09.png',
     process.env.PUBLIC_URL + '/images/gallery/10.png',
     process.env.PUBLIC_URL + '/images/gallery/11.png',

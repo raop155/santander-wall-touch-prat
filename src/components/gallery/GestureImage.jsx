@@ -93,6 +93,7 @@ const GestureImage = ({ imagePath, getTopValue }) => {
   return (
     <animated.div
       ref={domTarget}
+      className='gesture-image'
       style={{
         position: 'absolute',
         transform: `translate3d(${randomX}px, ${randomY}px, 0px) rotate(${randomAngle}deg) scale(${randomScale})`,
