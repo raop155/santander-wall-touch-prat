@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom';
 
 import './styles/styles.scss';
+// import './styles/production.scss';
 import App from './App.jsx';
 
 ReactDOM.render(

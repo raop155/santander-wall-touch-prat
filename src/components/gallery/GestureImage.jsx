@@ -88,6 +88,8 @@ const GestureImage = ({ imagePath, getTopValue }) => {
     };
   }, []);
 
+  // return <div ref={domTarget}>HELLO!!!</div>;
+
   return (
     <animated.div
       ref={domTarget}
@@ -105,7 +107,6 @@ const GestureImage = ({ imagePath, getTopValue }) => {
         userSelect: 'none',
       }}
     >
-      Hello
       <img width='500' draggable='false' src={imagePath} alt='Arturo Prat gallery' />
     </animated.div>
   );
