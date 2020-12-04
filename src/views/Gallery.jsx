@@ -21,15 +21,15 @@ const Gallery = () => {
   ];
 
   // get window width and height
-  const winWidth = 700;
-  const winHeight = 270;
+  // const winWidth = 700;
+  // const winHeight = 270;
 
   // console.log('winWidth', winWidth);
   // console.log('winHeight', winHeight);
 
-  function random(min, max) {
-    return Math.random() * (max - min) + min;
-  }
+  // function random(min, max) {
+  //   return Math.random() * (max - min) + min;
+  // }
 
   const zIndex = useRef(0);
 

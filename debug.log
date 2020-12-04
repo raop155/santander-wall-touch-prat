@@ -1,0 +1,2 @@
+[1204/154606.808:ERROR:file_io.cc(134)] WriteFile: Se está cerrando la canalización. (0xE8)
+[1204/154608.252:ERROR:registration_protocol_win.cc(103)] CreateFile: El sistema no puede encontrar el archivo especificado. (0x2)
